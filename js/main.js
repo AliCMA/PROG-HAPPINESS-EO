@@ -41,3 +41,26 @@ class Header {
         this.headerFigure.appendChild(this.headerImage);
     }
 }
+
+class Main {
+    element;
+    articleMain
+    placeToRenderMain;
+  
+
+    constructor(placeToRenderMain) {
+        this.placeToRenderMain = document.getElementsByTagName(placeToRenderMain)[0];
+
+        this.element = document.createElement("mainHappiness");
+        this.element.classList = ("mainHappiness");
+
+        this.articleMain = document.createElement("section");
+        this.articleMain.classList = ("MainContent")
+
+        this.render();
+    }
+    render() {
+        this.placeToRenderMain.appendChild(this.element);
+        this.element.appendChild(this.articleMain);
+    }
+}
