@@ -6,6 +6,7 @@
 
 .mainHappiness {
     width: 100%;
+    height: calc(125vh - map-get(vars.$viewheightmeeting, "HeaderHight") - map-get(vars.$viewheightmeeting, "BodyPadding"));
     display: flex;
     align-items: center;
     justify-content: center;
