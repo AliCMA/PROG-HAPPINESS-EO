@@ -231,3 +231,30 @@ class Footer {
     }
 
 }
+
+class AppHappiness {
+    APIDATA;
+    HeaderHappinessC;
+    HappinessMainC;
+    LeftSectionC;
+    RightSectionC;
+    FooterHappinessC;
+
+    constructor() {
+        this.APIDATA = new DataFromApi();
+        this.HeaderHappinessC = new Header("body");
+        this.HappinessMainC = new Main("body");
+        this.RightSectionC = new RightSection(this.HappinessMainC.articleMain);
+        this.LeftSectionC = new leftSection(this.HappinessMainC.articleMain, this.RightSectionC);
+        this.FooterHappinessC = new Footer(this.HappinessMainC.element);
+
+        this.APIDATA.GetData().then(
+            () => {
+                this.LeftSectionC.makeCardsFromData(this.APIDATA.data);
+                this.RightSectionC.Contentrender(this.APIDATA.data);
+            }
+        );
+    }
+}
+
+const app = new AppHappiness();
