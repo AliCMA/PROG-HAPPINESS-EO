@@ -130,4 +130,79 @@ class leftSection {
 
 }
 
+class RightSection {
+    placeToRenderRightPanel;
+    SectionRight;
+    SectionRight__SectionRightDiv;
+    SectionRight__SectionRightDatum;
+    titleDetail;
+    paragraphDetail;
+    imageDetail;
+    buttonDetail;
+    audio;
+    link;
+    constructor(placeToRenderRightPanel) {
+        this.placeToRenderRightPanel = placeToRenderRightPanel;
 
+        this.SectionRight = document.createElement("article");
+        this.SectionRight.classList = "SectionRight";
+
+        this.SectionRight__SectionRightDiv = document.createElement("__SectionRightDiv");
+        this.SectionRight__SectionRightDiv.classList = "SectionRight__SectionRightDiv";
+
+        this.imageDetail = document.createElement("img");
+        this.imageDetail.classList = "SectionRight__SectionRightImage";
+
+        this.datumDetail = document.createElement("h3");
+        this.datumDetail.classList = "SectionRight__SectionRightDatum";
+
+        this.titleDetail = document.createElement("h3");
+        this.titleDetail.classList = "SectionRightSectionRightTitle";
+
+        this.paragraphDetail = document.createElement("p");
+        this.paragraphDetail.classList = "SectionRight__SectionRightContent";
+
+        this.buttonDetail = document.createElement("__SectionRightDiv");
+        this.buttonDetail.classList = "SectionRight__SectionRightBtn";
+
+        this.audio = document.createElement("audio");
+        this.audio.classList = "SectionRight__audio";
+        this.audio.setAttribute("controls", true)
+
+        this.link = document.createElement("a");
+        this.link.classList = ("SectionRight__SectionRightSource");
+        
+
+        this.render();
+    }
+
+    render() {
+        this.placeToRenderRightPanel.appendChild(this.SectionRight);
+
+        this.SectionRight.appendChild(this.SectionRight__SectionRightDiv);
+        this.SectionRight.appendChild(this.paragraphDetail);
+        this.SectionRight.appendChild(this.buttonDetail);
+
+        this.SectionRight__SectionRightDiv.appendChild(this.imageDetail);
+        this.SectionRight__SectionRightDiv.appendChild(this.datumDetail);
+        this.SectionRight__SectionRightDiv.appendChild(this.titleDetail);
+
+        this.buttonDetail.appendChild(this.audio);
+        this.buttonDetail.appendChild(this.link);
+    }
+
+    Contentrender(data) {
+        //header
+        this.imageDetail.src = data[0]["image"];
+        this.datumDetail.innerHTML = data[0]["date (dd-mm-yyyy)"];
+        this.titleDetail.innerHTML = data[0]["title"];
+        //text
+        this.paragraphDetail.innerHTML = data[0]["summary"];
+        //audio
+        this.audio.src = data[0]["audio"];
+        //link
+        this.link.innerHTML = "source";
+        this.link.href = data[0]["url"];
+    }
+
+}
