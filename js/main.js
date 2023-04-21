@@ -30,7 +30,7 @@ class Header {
         this.headerImage.src = "./images/Logo.webp"
         this.headerHeading = document.createElement("h1");
         this.headerHeading.classList = ("HappinesHeader__title");
-        this.headerHeading.innerHTML = "Collection of Amsterdam";
+        this.headerHeading.innerHTML = "Collection of HAPPINESS!";
         this.render();
     }
 
@@ -203,6 +203,31 @@ class RightSection {
         //link
         this.link.innerHTML = "source";
         this.link.href = data[0]["url"];
+    }
+
+}
+
+class Footer {
+    placeToRenderFooter;
+    HappinessFooter;
+    HappinessFooter__pfooter;
+
+    constructor(placeToRenderFooter) {
+        this.placeToRenderFooter = placeToRenderFooter;
+
+        this.HappinessFooter = document.createElement("HappinessFooter");
+        this.HappinessFooter.classList = ("HappinessFooter");
+
+        this.HappinessFooter__pfooter = document.createElement("p");
+        this.HappinessFooter__pfooter.classList = ("HappinessFooter__p")
+        this.HappinessFooter__pfooter.innerHTML = "Gemaakt door: Ali Çeliksu";
+
+        this.render();
+    }
+
+    render() {
+        this.placeToRenderFooter.appendChild(this.HappinessFooter);
+        this.HappinessFooter.appendChild(this.HappinessFooter__pfooter);
     }
 
 }
