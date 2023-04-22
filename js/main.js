@@ -13,7 +13,7 @@ class DataFromApi {
 
 class Header {
     placeToRenderHeader;
-    header;
+    HappinesHeader;
     headerFigure;
     headerImage;
     headerHeading;
@@ -21,8 +21,8 @@ class Header {
     constructor(placeToRenderHeader) {
         this.placeToRenderHeader = document.getElementsByTagName(placeToRenderHeader)[0];
 
-        this.header = document.createElement("HappinesHeader");
-        this.header.classList = ("HappinesHeader");
+        this.HappinesHeader = document.createElement("HappinesHeader");
+        this.HappinesHeader.classList = ("HappinesHeader");
         this.headerFigure = document.createElement("headerfigure");
         this.headerFigure.classList = ("HappinesHeader__headerfigure");
         this.headerImage = document.createElement("img");
@@ -35,16 +35,16 @@ class Header {
     }
 
     render() {
-        this.placeToRenderHeader.appendChild(this.header);
-        this.header.appendChild(this.headerFigure);
-        this.header.appendChild(this.headerHeading);
+        this.placeToRenderHeader.appendChild(this.HappinesHeader);
+        this.HappinesHeader.appendChild(this.headerFigure);
+        this.HappinesHeader.appendChild(this.headerHeading);
         this.headerFigure.appendChild(this.headerImage);
     }
 }
 
 class Main {
     element;
-    articleMain
+    MainArticleHappiness    
     placeToRenderMain;
   
 
@@ -54,14 +54,14 @@ class Main {
         this.element = document.createElement("mainHappiness");
         this.element.classList = ("mainHappiness");
 
-        this.articleMain = document.createElement("section");
-        this.articleMain.classList = ("MainContent")
+        this.MainArticleHappiness = document.createElement("section");
+        this.MainArticleHappiness.classList = ("MainContent")
 
         this.render();
     }
     render() {
         this.placeToRenderMain.appendChild(this.element);
-        this.element.appendChild(this.articleMain);
+        this.element.appendChild(this.MainArticleHappiness);
     }
 }
 
@@ -244,8 +244,8 @@ class AppHappiness {
         this.APIDATA = new DataFromApi();
         this.HeaderHappinessC = new Header("body");
         this.HappinessMainC = new Main("body");
-        this.RightSectionC = new RightSection(this.HappinessMainC.articleMain);
-        this.LeftSectionC = new leftSection(this.HappinessMainC.articleMain, this.RightSectionC);
+        this.RightSectionC = new RightSection(this.HappinessMainC.MainArticleHappiness);
+        this.LeftSectionC = new leftSection(this.HappinessMainC.MainArticleHappiness, this.RightSectionC);
         this.FooterHappinessC = new Footer(this.HappinessMainC.element);
 
         this.APIDATA.GetData().then(
