@@ -13,7 +13,7 @@ class DataFromApi {
 
 class Header {
     placeToRenderHeader;
-    HappinesHeader;
+    header;
     headerFigure;
     headerImage;
     headerHeading;
@@ -21,8 +21,8 @@ class Header {
     constructor(placeToRenderHeader) {
         this.placeToRenderHeader = document.getElementsByTagName(placeToRenderHeader)[0];
 
-        this.HappinesHeader = document.createElement("HappinesHeader");
-        this.HappinesHeader.classList = ("HappinesHeader");
+        this.header = document.createElement("HappinesHeader");
+        this.header.classList = ("HappinesHeader");
         this.headerFigure = document.createElement("headerfigure");
         this.headerFigure.classList = ("HappinesHeader__headerfigure");
         this.headerImage = document.createElement("img");
@@ -30,14 +30,14 @@ class Header {
         this.headerImage.src = "./images/Logo.webp"
         this.headerHeading = document.createElement("h1");
         this.headerHeading.classList = ("HappinesHeader__title");
-        this.headerHeading.innerHTML = "Collection of HAPPINESS!";
+        this.headerHeading.innerHTML = "Collection of Happiness";
         this.render();
     }
 
     render() {
-        this.placeToRenderHeader.appendChild(this.HappinesHeader);
-        this.HappinesHeader.appendChild(this.headerFigure);
-        this.HappinesHeader.appendChild(this.headerHeading);
+        this.placeToRenderHeader.appendChild(this.header);
+        this.header.appendChild(this.headerFigure);
+        this.header.appendChild(this.headerHeading);
         this.headerFigure.appendChild(this.headerImage);
     }
 }

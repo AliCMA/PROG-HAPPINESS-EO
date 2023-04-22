@@ -185,4 +185,31 @@ body {
   align-items: center;
 }
 
+@media screen and (max-width: 95rem) {
+  .SectionRight {
+    width: 100%;
+  }
+  .SectionRight__audio {
+    position: relative;
+    right: 2rem;
+  }
+  .SectionRight__SectionRightContent {
+    width: 100%;
+    width: 68%;
+  }
+  .mainHappiness {
+    position: relative;
+    height: auto;
+  }
+  .LeftSection {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+  }
+  .MainContent {
+    flex-direction: column;
+    height: auto;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
