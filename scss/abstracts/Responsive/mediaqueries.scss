@@ -32,8 +32,25 @@
     flex-direction: column;
     height: auto;
   }
-
-
-
-
 }
+
+
+@media screen and (max-width: 62.5rem) {
+    .LeftSection {
+      &__LeftSectionUl {
+        position: relative;
+        right: 5rem;
+      }
+
+      &__LeftSectionLi {
+        position: relative;
+        left:0rem;
+      }
+
+      &__LeftSectionImage{
+          aspect-ratio: 1/1;
+          width: 100%;
+          height: 100%;
+      }
+    }
+  }
