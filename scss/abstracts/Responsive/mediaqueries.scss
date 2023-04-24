@@ -81,3 +81,29 @@
     width: 100%;
   }
 }
+
+@media screen and (max-width: 31.25rem) {
+  .mainHappiness {
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+
+
+  .LeftSection {
+    &__LeftSectionUl {
+      display: flex;
+      gap: 2rem;
+      position: relative;
+      right: 5rem;
+      flex-direction: column;
+
+    }
+
+    &__li {
+      position: relative;
+      left: 0rem;
+    }
+  }
+}
