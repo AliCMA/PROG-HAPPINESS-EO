@@ -20,10 +20,9 @@ class Header {
 
     constructor(placeToRenderHeader) {
         this.placeToRenderHeader = document.getElementsByTagName(placeToRenderHeader)[0];
-
-        this.header = document.createElement("HappinesHeader");
+        this.header = document.createElement("header");
         this.header.classList = ("HappinesHeader");
-        this.headerFigure = document.createElement("headerfigure");
+        this.headerFigure = document.createElement("figure");
         this.headerFigure.classList = ("HappinesHeader__headerfigure");
         this.headerImage = document.createElement("img");
         this.headerImage.classList = ("HappinesHeader__headerimage");
@@ -50,13 +49,10 @@ class Main {
 
     constructor(placeToRenderMain) {
         this.placeToRenderMain = document.getElementsByTagName(placeToRenderMain)[0];
-
-        this.element = document.createElement("mainHappiness");
+        this.element = document.createElement("main");
         this.element.classList = ("mainHappiness");
-
         this.MainArticleHappiness = document.createElement("section");
         this.MainArticleHappiness.classList = ("MainContent")
-
         this.render();
     }
     render() {
@@ -78,16 +74,17 @@ class leftSection {
         this.HappinessArticleLeftSection = document.createElement("artcile");
         this.HappinessArticleLeftSection.classList = ("LeftSection");
 
-        this.LeftSectionUl = document.createElement("__LeftSectionUl");
+        this.LeftSectionUl = document.createElement("ul");
         this.LeftSectionUl.classList = ("LeftSection__LeftSectionUl");
     } 
     //Elk keer random data + nieuwe foto:
     makeCardsFromData(data) {
         let randomnummer1 = Math.floor(Math.random() * 4);
         let randomnummer2 = randomnummer1 + 4;
+        
         for (let i = randomnummer1; i < randomnummer2; i++) {
 
-            this.listLeftArticle = document.createElement("LeftSectionLi");
+            this.listLeftArticle = document.createElement("li");
             this.listLeftArticle.classList = "LeftSection__LeftSectionLi";
 
             this.listLeftImageArticle = document.createElement("img");
@@ -147,7 +144,7 @@ class RightSection {
         this.SectionRight = document.createElement("article");
         this.SectionRight.classList = "SectionRight";
 
-        this.SectionRight__SectionRightDiv = document.createElement("__SectionRightDiv");
+        this.SectionRight__SectionRightDiv = document.createElement("section");
         this.SectionRight__SectionRightDiv.classList = "SectionRight__SectionRightDiv";
 
         this.imageDetail = document.createElement("img");

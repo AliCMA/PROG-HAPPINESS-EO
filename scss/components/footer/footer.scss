@@ -1,17 +1,7 @@
 //Importeer file die ik wil gebruiken::after
 @use "../../abstracts/colors/colors.scss";
+@import "../../abstracts/mixin/mixins.scss";
 
 .HappinessFooter{
-    height: 5rem;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: colors.$grijs;
-    padding: 3rem;
-
-    &__pfooter{
-        font-size: 100%;
-        color: rgb(79, 79, 79);
-    }
+    @include happinessFooter;
 }

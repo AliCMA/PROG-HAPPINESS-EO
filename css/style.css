@@ -245,5 +245,22 @@ body {
     width: 100%;
   }
 }
+@media screen and (max-width: 31.25rem) {
+  .mainHappiness {
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+  .LeftSection__LeftSectionUl {
+    display: flex;
+    gap: 2rem;
+    position: relative;
+    right: 5rem;
+    flex-direction: column;
+  }
+  .LeftSection__li {
+    position: relative;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
