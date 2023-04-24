@@ -211,5 +211,39 @@ body {
     height: auto;
   }
 }
+@media screen and (max-width: 62.5rem) {
+  .LeftSection__LeftSectionUl {
+    position: relative;
+    right: 5rem;
+  }
+  .LeftSection__LeftSectionLi {
+    position: relative;
+    left: 0rem;
+  }
+  .LeftSection__LeftSectionImage {
+    aspect-ratio: 1/1;
+    width: 100%;
+    height: 100%;
+  }
+  .SectionRight__audio {
+    position: relative;
+    left: 1rem;
+  }
+  .SectionRight__SectionRightBtn {
+    width: 100%;
+  }
+  .SectionRight__SectionRightDiv {
+    width: 30rem;
+  }
+  .SectionRight__SectionRightContent {
+    width: 100%;
+    width: 27rem;
+  }
+  .HappinessFooter {
+    display: flex;
+    height: 10rem;
+    width: 100%;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
