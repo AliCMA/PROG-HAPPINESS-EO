@@ -70,10 +70,8 @@ class leftSection {
     constructor(placeToRenderLLeftSection, ArticleBeginRight) {
         this.ArticleBeginRight = ArticleBeginRight;
         this.placeToRenderLLeftSection = placeToRenderLLeftSection;
-
         this.HappinessArticleLeftSection = document.createElement("artcile");
         this.HappinessArticleLeftSection.classList = ("LeftSection");
-
         this.LeftSectionUl = document.createElement("ul");
         this.LeftSectionUl.classList = ("LeftSection__LeftSectionUl");
     }
