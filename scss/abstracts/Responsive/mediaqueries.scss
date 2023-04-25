@@ -17,7 +17,6 @@
   }
 
   .mainHappiness {
-
     position: relative;
     height: auto;
   }
@@ -55,14 +54,19 @@
   }
 
   .SectionRight {
+    
     &__audio {
       position: relative;
       left: 1rem;
+      justify-content: center;
 
     }
 
     &__SectionRightBtn {
       width: 100%;
+      flex-direction: column;
+      justify-content: center;
+
     }
 
     &__SectionRightDiv {
