@@ -43,9 +43,9 @@ class Header {
 
 class Main {
     element;
-    MainArticleHappiness    
+    MainArticleHappiness
     placeToRenderMain;
-  
+
 
     constructor(placeToRenderMain) {
         this.placeToRenderMain = document.getElementsByTagName(placeToRenderMain)[0];
@@ -66,7 +66,7 @@ class leftSection {
     HappinessArticleLeftSection;
     LeftSectionUl;
     ArticleBeginRight
-    
+
     constructor(placeToRenderLLeftSection, ArticleBeginRight) {
         this.ArticleBeginRight = ArticleBeginRight;
         this.placeToRenderLLeftSection = placeToRenderLLeftSection;
@@ -76,12 +76,12 @@ class leftSection {
 
         this.LeftSectionUl = document.createElement("ul");
         this.LeftSectionUl.classList = ("LeftSection__LeftSectionUl");
-    } 
+    }
     //Elk keer random data + nieuwe foto:
     DataCards(data) {
         let randomnummer1 = Math.floor(Math.random() * 4);
         let randomnummer2 = randomnummer1 + 4;
-        
+
         for (let i = randomnummer1; i < randomnummer2; i++) {
 
             this.listLeftArticle = document.createElement("li");
@@ -156,7 +156,7 @@ class RightSection {
         this.audio.setAttribute("controls", true)
         this.link = document.createElement("a");
         this.link.classList = ("SectionRight__SectionRightSource");
-        
+
 
         this.render();
     }
