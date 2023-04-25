@@ -196,7 +196,7 @@ class Footer {
 
     constructor(placeToRenderFooter) {
         this.placeToRenderFooter = placeToRenderFooter;
-        this.HappinessFooter = document.createElement("HappinessFooter");
+        this.HappinessFooter = document.createElement("footer");
         this.HappinessFooter.classList = ("HappinessFooter");
         this.HappinessFooter__pfooter = document.createElement("p");
         this.HappinessFooter__pfooter.classList = ("HappinessFooter__p")
