@@ -43,7 +43,6 @@
 
     &__LeftSectionLi {
       position: relative;
-      left: 0rem;
     }
 
     &__LeftSectionImage {
@@ -57,7 +56,6 @@
     
     &__audio {
       position: relative;
-      left: 1rem;
       justify-content: center;
 
     }
@@ -92,7 +90,7 @@
     margin: 0;
     padding: 0;
   }
-  
+
   .LeftSection {
     &__LeftSectionUl {
       display: flex;

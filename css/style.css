@@ -207,7 +207,6 @@ body {
   }
   .LeftSection__LeftSectionLi {
     position: relative;
-    left: 0rem;
   }
   .LeftSection__LeftSectionImage {
     aspect-ratio: 1/1;
@@ -216,7 +215,6 @@ body {
   }
   .SectionRight__audio {
     position: relative;
-    left: 1rem;
     justify-content: center;
   }
   .SectionRight__SectionRightBtn {
